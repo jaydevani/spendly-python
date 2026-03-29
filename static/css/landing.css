@@ -71,6 +71,10 @@
 .hero-actions .btn-primary {
     background: var(--ink);
     color: var(--paper);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
 }
 
 .hero-actions .btn-primary:hover {
@@ -198,3 +202,64 @@
 .bar-food   { background: var(--accent-2); }
 .bar-travel { background: #8b5e83; }
 .bar-bills  { background: var(--accent); }
+
+/* ------------------------------------------------------------------ */
+/* Video modal                                                         */
+/* ------------------------------------------------------------------ */
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.modal-overlay.is-open {
+    display: flex;
+}
+
+.modal-box {
+    position: relative;
+    background: var(--ink);
+    border-radius: var(--radius-lg);
+    width: 100%;
+    max-width: 800px;
+    overflow: hidden;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.4);
+}
+
+.modal-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.875rem;
+    background: none;
+    border: none;
+    color: var(--paper);
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0.7;
+    transition: opacity 0.15s;
+}
+
+.modal-close:hover { opacity: 1; }
+
+.modal-video-wrap {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+}
+
+.modal-video-wrap iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
