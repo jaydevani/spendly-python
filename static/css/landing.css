@@ -1,0 +1,200 @@
+/* ------------------------------------------------------------------ */
+/* Hero overrides — centered single-column layout                      */
+/* ------------------------------------------------------------------ */
+
+.hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 4.5rem 2rem 3.5rem;
+    gap: 3rem;
+    max-width: 760px;
+}
+
+.hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Badge */
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 500;
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    margin-bottom: 1.75rem;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.badge-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+}
+
+/* Headline */
+.hero-title {
+    font-size: clamp(2.6rem, 6vw, 4rem);
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.02em;
+}
+
+.hero-title-accent {
+    color: var(--accent);
+    font-style: normal;
+}
+
+/* Subtitle */
+.hero-subtitle {
+    font-size: 1rem;
+    color: var(--ink-muted);
+    line-height: 1.75;
+    max-width: 480px;
+    margin-bottom: 2rem;
+}
+
+/* CTA buttons — both solid black */
+.hero-actions {
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.hero-actions .btn-primary {
+    background: var(--ink);
+    color: var(--paper);
+}
+
+.hero-actions .btn-primary:hover {
+    background: var(--accent);
+}
+
+/* ------------------------------------------------------------------ */
+/* App preview frame                                                   */
+/* ------------------------------------------------------------------ */
+
+.app-frame {
+    background: var(--paper-warm);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.07);
+}
+
+.app-chrome {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0.75rem 1rem;
+    background: var(--paper-card);
+    border-bottom: 1px solid var(--border-soft);
+}
+
+.app-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.app-dot-red    { background: #ff5f57; }
+.app-dot-yellow { background: #febc2e; }
+.app-dot-green  { background: #28c840; }
+
+.app-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/* Stat cards row */
+.stat-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+}
+
+.stat-card {
+    background: var(--paper-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 0.875rem 1rem;
+}
+
+.stat-label {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.3rem;
+}
+
+.stat-value {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    color: var(--ink);
+    line-height: 1.2;
+    margin-bottom: 0.25rem;
+}
+
+.stat-change {
+    font-size: 0.72rem;
+    font-weight: 500;
+}
+
+.stat-down { color: var(--danger); }
+.stat-up   { color: var(--accent); }
+
+.stat-note {
+    font-size: 0.72rem;
+    color: var(--ink-faint);
+}
+
+/* Bar chart */
+.preview-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.preview-bar-row {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.preview-cat {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--ink-soft);
+    text-align: left;
+}
+
+.preview-bar-track {
+    height: 8px;
+    background: var(--border-soft);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.preview-bar {
+    height: 100%;
+    border-radius: 999px;
+}
+
+.bar-food   { background: var(--accent-2); }
+.bar-travel { background: #8b5e83; }
+.bar-bills  { background: var(--accent); }
